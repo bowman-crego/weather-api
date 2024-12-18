@@ -101,9 +101,10 @@ class WeatherService {
     this.cityName = city;
     const coordinates = await this.fetchAndDestructureLocationData();
     const weatherData = await this.fetchWeatherData(coordinates);
-    const currentWeather = this.parseCurrentWeather(weatherData);
-    const forecastArray = this.buildForecastArray(weatherData);
-    return { currentWeather, forecastArray };
+    return {coordinates, weatherData};
+    // const currentWeather = this.parseCurrentWeather(weatherData);
+    // const forecastArray = this.buildForecastArray(weatherData);
+    // return { currentWeather, forecastArray };
   }
 }
 
