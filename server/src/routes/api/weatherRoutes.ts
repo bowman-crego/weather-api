@@ -1,7 +1,7 @@
 import { Router } from 'express';
 const router = Router();
 
-// import HistoryService from '../../service/historyService.js';
+import HistoryService from '../../service/historyService.js';
 import WeatherService from '../../service/weatherService.js';
 
 // TODO: POST Request with city name to retrieve weather data
@@ -20,7 +20,8 @@ router.post('/', async (req, res) => {
 
 // TODO: GET search history
 router.get('/history', async (req, res) => {
-  console.log(req, res);
+  const searchHistory = await HistoryService.getCities();
+  res.send(searchHistory);
 });
 
 // * BONUS TODO: DELETE city from search history
