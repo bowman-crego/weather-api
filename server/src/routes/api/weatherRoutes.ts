@@ -17,12 +17,12 @@ router.post('/', (req, res) => {
 
 // TODO: GET search history
 router.get('/history', async (req, res) => {
-  
+  console.log(req, res);
 });
 
 // * BONUS TODO: DELETE city from search history
 router.delete('/history/:id', async (req, res) => {
-  
+  console.log(req, res);
 });
 
 export default router;
