@@ -10,8 +10,8 @@ interface Coordinates {
 class Weather {
   city: string;
   temperature: number;
-  humidity: number;
   windSpeed: number;
+  humidity: number;
   uvIndex: number;
   weatherIcon: string;
 
@@ -25,8 +25,8 @@ class Weather {
   ) {
     this.city = city;
     this.temperature = temperature;
-    this.humidity = humidity;
     this.windSpeed = windSpeed;
+    this.humidity = humidity;
     this.uvIndex = uvIndex;
     this.weatherIcon = weatherIcon;
   }
@@ -39,7 +39,7 @@ class WeatherService {
 
   constructor() {
     this.baseURL = 'https://api.openweathermap.org/data/2.5/';
-    this.apiKey = process.env.WEATHER_API_KEY || '';
+    this.apiKey = process.env.API_KEY || '';
     this.cityName = '';
 
   }
