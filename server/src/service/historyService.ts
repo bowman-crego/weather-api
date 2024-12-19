@@ -5,6 +5,7 @@ import fs from 'fs/promises';
 class City {
   name: string;
   id: string;
+  
 
   constructor(name: string, id: string) {
     this.name = name;
